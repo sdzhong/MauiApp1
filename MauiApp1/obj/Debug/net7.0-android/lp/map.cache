@@ -155,3 +155,10 @@ gifdecoder.aar
 glide.aar
 GoogleGson.aar
 Xamarin.Google.Crypto.Tink.Android.aar
+Sentry.Bindings.Android.dll
+Sentry.dll
+Sentry.Maui.dll
+sentry-android-core-7.11.0.aar
+sentry-android-ndk-7.11.0.aar
+Sentry.Bindings.Android.aar
+Sentry.Maui.aar

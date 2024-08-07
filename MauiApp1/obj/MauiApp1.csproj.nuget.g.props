@@ -25,12 +25,15 @@
     <Import Project="$(NuGetPackageRoot)microsoft.net.illink.analyzers/7.0.100-1.23401.1/build/Microsoft.NET.ILLink.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.illink.analyzers/7.0.100-1.23401.1/build/Microsoft.NET.ILLink.Analyzers.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net7.0-android' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgSentry Condition=" '$(PkgSentry)' == '' ">/Users/simon/.nuget/packages/sentry/4.9.0</PkgSentry>
     <PkgMicrosoft_NET_ILLink_Tasks Condition=" '$(PkgMicrosoft_NET_ILLink_Tasks)' == '' ">/Users/simon/.nuget/packages/microsoft.net.illink.tasks/7.0.100-1.23401.1</PkgMicrosoft_NET_ILLink_Tasks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net7.0-ios' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgSentry Condition=" '$(PkgSentry)' == '' ">/Users/simon/.nuget/packages/sentry/4.9.0</PkgSentry>
     <PkgMicrosoft_NET_ILLink_Tasks Condition=" '$(PkgMicrosoft_NET_ILLink_Tasks)' == '' ">/Users/simon/.nuget/packages/microsoft.net.illink.tasks/7.0.100-1.23401.1</PkgMicrosoft_NET_ILLink_Tasks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net7.0-maccatalyst' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgSentry Condition=" '$(PkgSentry)' == '' ">/Users/simon/.nuget/packages/sentry/4.9.0</PkgSentry>
     <PkgMicrosoft_NET_ILLink_Tasks Condition=" '$(PkgMicrosoft_NET_ILLink_Tasks)' == '' ">/Users/simon/.nuget/packages/microsoft.net.illink.tasks/7.0.100-1.23401.1</PkgMicrosoft_NET_ILLink_Tasks>
   </PropertyGroup>
 </Project>

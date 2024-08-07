@@ -15,6 +15,19 @@
           }
         }
       },
+      "K4os.Compression.LZ4/1.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -54,6 +67,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -87,6 +116,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -125,6 +173,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -168,6 +239,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -207,6 +298,92 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Android.AssemblyReader": "4.9.0",
+          "Sentry.Bindings.Android": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Android.AssemblyReader/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "K4os.Compression.LZ4": "1.3.5"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Android.AssemblyReader.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Android.AssemblyReader.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Bindings.Android/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.Bindings.Android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.Bindings.Android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "build": {
+          "build/net7.0-android33.0/_._": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.Maui.dll": {
+            "related": ".aar;.xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.13.2.2": {
@@ -1952,6 +2129,19 @@
           }
         }
       },
+      "K4os.Compression.LZ4/1.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -1991,6 +2181,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -2024,6 +2230,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -2062,6 +2287,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -2105,6 +2353,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -2144,6 +2412,92 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Android.AssemblyReader": "4.9.0",
+          "Sentry.Bindings.Android": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Android.AssemblyReader/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "K4os.Compression.LZ4": "1.3.5"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Android.AssemblyReader.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Android.AssemblyReader.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Bindings.Android/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.Bindings.Android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.Bindings.Android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "build": {
+          "build/net7.0-android33.0/_._": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.Maui.dll": {
+            "related": ".aar;.xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.13.2.2": {
@@ -3889,6 +4243,19 @@
           }
         }
       },
+      "K4os.Compression.LZ4/1.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -3928,6 +4295,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -3961,6 +4344,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -3999,6 +4401,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -4042,6 +4467,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -4081,6 +4526,92 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Android.AssemblyReader": "4.9.0",
+          "Sentry.Bindings.Android": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Android.AssemblyReader/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "K4os.Compression.LZ4": "1.3.5"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Android.AssemblyReader.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Android.AssemblyReader.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Bindings.Android/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.Bindings.Android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.Bindings.Android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "build": {
+          "build/net7.0-android33.0/_._": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.Maui.dll": {
+            "related": ".aar;.xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.13.2.2": {
@@ -5826,6 +6357,19 @@
           }
         }
       },
+      "K4os.Compression.LZ4/1.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -5865,6 +6409,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -5898,6 +6458,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -5936,6 +6515,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -5979,6 +6581,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -6018,6 +6640,92 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Android.AssemblyReader": "4.9.0",
+          "Sentry.Bindings.Android": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Android.AssemblyReader/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "K4os.Compression.LZ4": "1.3.5"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Android.AssemblyReader.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Android.AssemblyReader.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Bindings.Android/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.Bindings.Android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.Bindings.Android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "build": {
+          "build/net7.0-android33.0/_._": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.Maui.dll": {
+            "related": ".aar;.xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.13.2.2": {
@@ -7763,6 +8471,19 @@
           }
         }
       },
+      "K4os.Compression.LZ4/1.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -7802,6 +8523,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -7835,6 +8572,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -7873,6 +8629,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -7916,6 +8695,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -7955,6 +8754,92 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Android.AssemblyReader": "4.9.0",
+          "Sentry.Bindings.Android": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Android.AssemblyReader/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "K4os.Compression.LZ4": "1.3.5"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Android.AssemblyReader.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Android.AssemblyReader.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Bindings.Android/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.Bindings.Android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.Bindings.Android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "build": {
+          "build/net7.0-android33.0/_._": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.Maui.dll": {
+            "related": ".aar;.xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.13.2.2": {
@@ -9700,6 +10585,19 @@
           }
         }
       },
+      "K4os.Compression.LZ4/1.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -9739,6 +10637,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -9772,6 +10686,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -9810,6 +10743,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -9853,6 +10809,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -9892,6 +10868,92 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Android.AssemblyReader": "4.9.0",
+          "Sentry.Bindings.Android": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Android.AssemblyReader/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "K4os.Compression.LZ4": "1.3.5"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Android.AssemblyReader.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Android.AssemblyReader.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Bindings.Android/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.Bindings.Android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.Bindings.Android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "build": {
+          "build/net7.0-android33.0/_._": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.Maui.dll": {
+            "related": ".aar;.xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.13.2.2": {
@@ -11637,6 +12699,19 @@
           }
         }
       },
+      "K4os.Compression.LZ4/1.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -11676,6 +12751,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -11709,6 +12800,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -11747,6 +12857,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -11790,6 +12923,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -11829,6 +12982,92 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Android.AssemblyReader": "4.9.0",
+          "Sentry.Bindings.Android": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Android.AssemblyReader/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "K4os.Compression.LZ4": "1.3.5"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Android.AssemblyReader.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Android.AssemblyReader.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Bindings.Android/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.Bindings.Android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.Bindings.Android.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "build": {
+          "build/net7.0-android33.0/_._": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-android33.0/Sentry.Maui.dll": {
+            "related": ".aar;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-android33.0/Sentry.Maui.dll": {
+            "related": ".aar;.xml"
+          }
         }
       },
       "Xamarin.Android.Glide/4.13.2.2": {
@@ -13600,6 +14839,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -13633,6 +14888,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -13671,6 +14945,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -13714,6 +15011,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -13753,6 +15070,75 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Bindings.Cocoa": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Bindings.Cocoa/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources/Sentry.xcframework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources/Sentry.xcframework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.Bindings.Cocoa.targets": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -13796,6 +15182,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -13829,6 +15231,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -13867,6 +15288,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -13910,6 +15354,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -13949,6 +15413,75 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Bindings.Cocoa": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Bindings.Cocoa/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources/Sentry.xcframework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources/Sentry.xcframework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.Bindings.Cocoa.targets": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -13992,6 +15525,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -14025,6 +15574,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -14063,6 +15631,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -14106,6 +15697,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -14145,6 +15756,75 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Bindings.Cocoa": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Bindings.Cocoa/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources/Sentry.xcframework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources/Sentry.xcframework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.Bindings.Cocoa.targets": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -14188,6 +15868,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -14221,6 +15917,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -14259,6 +15974,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -14302,6 +16040,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -14341,6 +16099,75 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Bindings.Cocoa": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Bindings.Cocoa/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources/Sentry.xcframework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources/Sentry.xcframework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.Bindings.Cocoa.targets": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -14384,6 +16211,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -14417,6 +16260,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -14455,6 +16317,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -14498,6 +16383,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -14537,6 +16442,75 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Bindings.Cocoa": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Bindings.Cocoa/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources/Sentry.xcframework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources/Sentry.xcframework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.Bindings.Cocoa.targets": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -14580,6 +16554,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -14613,6 +16603,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -14651,6 +16660,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -14694,6 +16726,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -14733,6 +16785,75 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Bindings.Cocoa": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Bindings.Cocoa/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources/Sentry.xcframework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources/Sentry.xcframework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.Bindings.Cocoa.targets": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -14776,6 +16897,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -14809,6 +16946,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -14847,6 +17003,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -14890,6 +17069,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -14929,6 +17128,75 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Bindings.Cocoa": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Bindings.Cocoa/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources/Sentry.xcframework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources/Sentry.xcframework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist;.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.Bindings.Cocoa.targets": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-ios16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-ios16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -14972,6 +17240,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -15005,6 +17289,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -15043,6 +17346,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -15086,6 +17412,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -15125,6 +17471,75 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Bindings.Cocoa": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Bindings.Cocoa/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources.zip;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources.zip;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.Bindings.Cocoa.targets": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -15168,6 +17583,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -15201,6 +17632,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -15239,6 +17689,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -15282,6 +17755,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -15321,6 +17814,75 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Bindings.Cocoa": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Bindings.Cocoa/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources.zip;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources.zip;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.Bindings.Cocoa.targets": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -15364,6 +17926,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -15397,6 +17975,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -15435,6 +18032,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -15478,6 +18098,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -15517,6 +18157,75 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Bindings.Cocoa": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Bindings.Cocoa/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources.zip;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources.zip;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.Bindings.Cocoa.targets": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -15560,6 +18269,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -15593,6 +18318,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -15631,6 +18375,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -15674,6 +18441,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -15713,6 +18500,75 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Bindings.Cocoa": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Bindings.Cocoa/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources.zip;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources.zip;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.Bindings.Cocoa.targets": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -15756,6 +18612,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -15789,6 +18661,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -15827,6 +18718,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -15870,6 +18784,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -15909,6 +18843,75 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Bindings.Cocoa": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Bindings.Cocoa/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources.zip;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources.zip;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.Bindings.Cocoa.targets": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -15952,6 +18955,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -15985,6 +19004,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -16023,6 +19061,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -16066,6 +19127,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -16105,6 +19186,75 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Bindings.Cocoa": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Bindings.Cocoa/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources.zip;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources.zip;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.Bindings.Cocoa.targets": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
         }
       }
     },
@@ -16148,6 +19298,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -16181,6 +19347,25 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging/7.0.0": {
@@ -16219,6 +19404,29 @@
         },
         "build": {
           "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.Logging.Debug/7.0.0": {
@@ -16262,6 +19470,26 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "compile": {
@@ -16302,6 +19530,75 @@
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
+      },
+      "Sentry/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Bindings.Cocoa": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.targets": {}
+        }
+      },
+      "Sentry.Bindings.Cocoa/4.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources.zip;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll": {
+            "related": ".resources.zip;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Sentry.Bindings.Cocoa.targets": {}
+        }
+      },
+      "Sentry.Extensions.Logging/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Http": "6.0.0",
+          "Microsoft.Extensions.Logging.Configuration": "6.0.0",
+          "Sentry": "4.9.0"
+        },
+        "compile": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sentry.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sentry.Maui/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Sentry.Extensions.Logging": "4.9.0"
+        },
+        "compile": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll": {
+            "related": ".xml"
+          }
+        }
       }
     }
   },
@@ -16322,6 +19619,27 @@
         "lib/net6.0-android31.0/GoogleGson.aar",
         "lib/net6.0-android31.0/GoogleGson.dll",
         "lib/net6.0-android31.0/GoogleGson.xml"
+      ]
+    },
+    "K4os.Compression.LZ4/1.3.5": {
+      "sha512": "TS4mqlT0X1OlnvOGNfl02QdVUhuqgWuCnn7UxupIa7C9Pb6qlQ5yZA2sPhRh0OSmVULaQU64KV4wJuu//UyVQQ==",
+      "type": "package",
+      "path": "k4os.compression.lz4/1.3.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "k4os.compression.lz4.1.3.5.nupkg.sha512",
+        "k4os.compression.lz4.nuspec",
+        "lib/net462/K4os.Compression.LZ4.dll",
+        "lib/net462/K4os.Compression.LZ4.xml",
+        "lib/net5.0/K4os.Compression.LZ4.dll",
+        "lib/net5.0/K4os.Compression.LZ4.xml",
+        "lib/net6.0/K4os.Compression.LZ4.dll",
+        "lib/net6.0/K4os.Compression.LZ4.xml",
+        "lib/netstandard2.0/K4os.Compression.LZ4.dll",
+        "lib/netstandard2.0/K4os.Compression.LZ4.xml",
+        "lib/netstandard2.1/K4os.Compression.LZ4.dll",
+        "lib/netstandard2.1/K4os.Compression.LZ4.xml"
       ]
     },
     "Microsoft.Extensions.Configuration/7.0.0": {
@@ -16375,6 +19693,25 @@
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
         "microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
         "microsoft.extensions.configuration.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Binder/6.0.0": {
+      "sha512": "b3ErKzND8LIC7o08QAVlKfaEIYEvLJbtmVbFZVBRXeu9YkKfSSzLZfR1SUfQPBIy9mKLhEtJgGYImkcMNaKE0A==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.binder/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Configuration.Binder.dll",
+        "lib/net461/Microsoft.Extensions.Configuration.Binder.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.xml",
+        "microsoft.extensions.configuration.binder.6.0.0.nupkg.sha512",
+        "microsoft.extensions.configuration.binder.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -16433,6 +19770,25 @@
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Http/6.0.0": {
+      "sha512": "15+pa2G0bAMHbHewaQIdr/y6ag2H3yh4rd9hTXavtWDzQBkvpe2RMqFg8BxDpcQWssmjmBApGPcw93QRz6YcMg==",
+      "type": "package",
+      "path": "microsoft.extensions.http/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Http.dll",
+        "lib/net461/Microsoft.Extensions.Http.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Http.xml",
+        "microsoft.extensions.http.6.0.0.nupkg.sha512",
+        "microsoft.extensions.http.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -16535,6 +19891,25 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.Extensions.Logging.Configuration/6.0.0": {
+      "sha512": "ZDskjagmBAbv+K8rYW9VhjPplhbOE63xUD0DiuydZJwt15dRyoqicYklLd86zzeintUc7AptDkHn+YhhYkYo8A==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.configuration/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Logging.Configuration.dll",
+        "lib/net461/Microsoft.Extensions.Logging.Configuration.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Configuration.xml",
+        "microsoft.extensions.logging.configuration.6.0.0.nupkg.sha512",
+        "microsoft.extensions.logging.configuration.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Microsoft.Extensions.Logging.Debug/7.0.0": {
       "sha512": "tFGGyPDpJ8ZdQdeckCArP7nZuoY3am9zJWuvp4OD1bHq65S0epW9BNHzAWeaIO4eYwWnGm1jRNt3vRciH8H6MA==",
       "type": "package",
@@ -16588,6 +19963,25 @@
         "lib/netstandard2.1/Microsoft.Extensions.Options.xml",
         "microsoft.extensions.options.7.0.0.nupkg.sha512",
         "microsoft.extensions.options.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Options.ConfigurationExtensions/6.0.0": {
+      "sha512": "bXWINbTn0vC0FYc9GaQTISbxhQLAMrvtbuvD9N6JelEaIS/Pr62wUCinrq5bf1WRBGczt1v4wDhxFtVFNcMdUQ==",
+      "type": "package",
+      "path": "microsoft.extensions.options.configurationextensions/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+        "lib/net461/Microsoft.Extensions.Options.ConfigurationExtensions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.xml",
+        "microsoft.extensions.options.configurationextensions.6.0.0.nupkg.sha512",
+        "microsoft.extensions.options.configurationextensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -16706,6 +20100,174 @@
         "tools/net7.0/illink.deps.json",
         "tools/net7.0/illink.dll",
         "tools/net7.0/illink.runtimeconfig.json"
+      ]
+    },
+    "Sentry/4.9.0": {
+      "sha512": "dvafAJjs1nyv/sXPjHjMiIq/XN1jjRCvTvn6BDdkeavjZXi0eX6JMpAKwGU5C8IlHY6Xhh13nk2u5e8AHQwwrw==",
+      "type": "package",
+      "path": "sentry/4.9.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/Sentry.Native.targets",
+        "build/Sentry.targets",
+        "buildTransitive/Sentry.Native.targets",
+        "buildTransitive/Sentry.targets",
+        "lib/net462/Sentry.dll",
+        "lib/net462/Sentry.xml",
+        "lib/net6.0/Sentry.dll",
+        "lib/net6.0/Sentry.xml",
+        "lib/net7.0-android33.0/Sentry.dll",
+        "lib/net7.0-android33.0/Sentry.xml",
+        "lib/net7.0-ios16.1/Sentry.dll",
+        "lib/net7.0-ios16.1/Sentry.xml",
+        "lib/net7.0-maccatalyst16.1/Sentry.dll",
+        "lib/net7.0-maccatalyst16.1/Sentry.xml",
+        "lib/net8.0-android34.0/Sentry.dll",
+        "lib/net8.0-android34.0/Sentry.xml",
+        "lib/net8.0-ios17.2/Sentry.dll",
+        "lib/net8.0-ios17.2/Sentry.xml",
+        "lib/net8.0-maccatalyst17.2/Sentry.dll",
+        "lib/net8.0-maccatalyst17.2/Sentry.xml",
+        "lib/net8.0/Sentry.dll",
+        "lib/net8.0/Sentry.xml",
+        "lib/netstandard2.0/Sentry.dll",
+        "lib/netstandard2.0/Sentry.xml",
+        "lib/netstandard2.1/Sentry.dll",
+        "lib/netstandard2.1/Sentry.xml",
+        "sentry-native/linux-x64/libsentry-native.a",
+        "sentry-native/osx/libsentry-native.a",
+        "sentry-native/win-x64/sentry-native.lib",
+        "sentry-nuget.png",
+        "sentry.4.9.0.nupkg.sha512",
+        "sentry.nuspec",
+        "tools/sentry-cli-Darwin-arm64",
+        "tools/sentry-cli-Darwin-x86_64",
+        "tools/sentry-cli-Linux-aarch64",
+        "tools/sentry-cli-Linux-i686",
+        "tools/sentry-cli-Linux-x86_64",
+        "tools/sentry-cli-Windows-i686.exe",
+        "tools/sentry-cli-Windows-x86_64.exe"
+      ]
+    },
+    "Sentry.Android.AssemblyReader/4.9.0": {
+      "sha512": "ZpAZzK8zhkoe1DzsUOXG10aFRC9FeOrgj/ZG9p6ou/Mvt/5wnjctYcS3iTgeIfEpAkUQVbd6EVLUMZg5JQeIaA==",
+      "type": "package",
+      "path": "sentry.android.assemblyreader/4.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net6.0/Sentry.Android.AssemblyReader.dll",
+        "lib/net6.0/Sentry.Android.AssemblyReader.xml",
+        "lib/netstandard2.0/Sentry.Android.AssemblyReader.dll",
+        "lib/netstandard2.0/Sentry.Android.AssemblyReader.xml",
+        "sentry-nuget.png",
+        "sentry.android.assemblyreader.4.9.0.nupkg.sha512",
+        "sentry.android.assemblyreader.nuspec"
+      ]
+    },
+    "Sentry.Bindings.Android/4.9.0": {
+      "sha512": "JzV6ZyiJX2eZu7g5LPvA0OublsaYOQwUbnyF7XdSQZD5NiBZCTeWHnlP4MMeGTRMBolG8zQymVBZt4BGJbf1FA==",
+      "type": "package",
+      "path": "sentry.bindings.android/4.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/net7.0-android33.0/Sentry.Bindings.Android.targets",
+        "lib/net7.0-android33.0/Sentry.Bindings.Android.aar",
+        "lib/net7.0-android33.0/Sentry.Bindings.Android.dll",
+        "lib/net7.0-android33.0/Sentry.Bindings.Android.xml",
+        "lib/net7.0-android33.0/sentry-android-core-7.11.0.aar",
+        "lib/net7.0-android33.0/sentry-android-ndk-7.11.0.aar",
+        "sentry-nuget.png",
+        "sentry-proguard.cfg",
+        "sentry.bindings.android.4.9.0.nupkg.sha512",
+        "sentry.bindings.android.nuspec"
+      ]
+    },
+    "Sentry.Bindings.Cocoa/4.9.0": {
+      "sha512": "hFh0IL4X7uIc3Vjazy5FQSSLwihGmH4hW/Bp3Tvu9YbNqF3Gub0MKfvClJe/kce43m86C9BP78kBD4L1xWb3cg==",
+      "type": "package",
+      "path": "sentry.bindings.cocoa/4.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "buildTransitive/Sentry.Bindings.Cocoa.targets",
+        "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.dll",
+        "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.resources/Sentry.xcframework/Info.plist",
+        "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Info.plist",
+        "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.resources/Sentry.xcframework/ios-arm64/Sentry.framework/PrivacyInfo.xcprivacy",
+        "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.resources/Sentry.xcframework/ios-arm64/Sentry.framework/Sentry",
+        "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Info.plist",
+        "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/PrivacyInfo.xcprivacy",
+        "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/Sentry",
+        "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.resources/Sentry.xcframework/ios-arm64_x86_64-simulator/Sentry.framework/_CodeSignature/CodeResources",
+        "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.resources/manifest",
+        "lib/net7.0-ios16.1/Sentry.Bindings.Cocoa.xml",
+        "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.dll",
+        "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.resources.zip",
+        "lib/net7.0-maccatalyst16.1/Sentry.Bindings.Cocoa.xml",
+        "sentry-nuget.png",
+        "sentry.bindings.cocoa.4.9.0.nupkg.sha512",
+        "sentry.bindings.cocoa.nuspec"
+      ]
+    },
+    "Sentry.Extensions.Logging/4.9.0": {
+      "sha512": "P+9y+rxE5YPHw1sWWMUcSDF5tHfm+vP9yxJiALE85RXMkzT/H7tp7Pstclbnht38KiPsC3sFUtMBdYFdiMvHKg==",
+      "type": "package",
+      "path": "sentry.extensions.logging/4.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net6.0/Sentry.Extensions.Logging.dll",
+        "lib/net6.0/Sentry.Extensions.Logging.xml",
+        "lib/net8.0/Sentry.Extensions.Logging.dll",
+        "lib/net8.0/Sentry.Extensions.Logging.xml",
+        "lib/netstandard2.0/Sentry.Extensions.Logging.dll",
+        "lib/netstandard2.0/Sentry.Extensions.Logging.xml",
+        "sentry-nuget.png",
+        "sentry.extensions.logging.4.9.0.nupkg.sha512",
+        "sentry.extensions.logging.nuspec"
+      ]
+    },
+    "Sentry.Maui/4.9.0": {
+      "sha512": "ni2kvWwZdYbbpjxLic3vZmjPmimpNMN28s3Q03PigzNIz4fBLYDomvWdniJsUrHWu1MsuSwUowv+SOnuaQbjPQ==",
+      "type": "package",
+      "path": "sentry.maui/4.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net7.0-android33.0/Sentry.Maui.aar",
+        "lib/net7.0-android33.0/Sentry.Maui.dll",
+        "lib/net7.0-android33.0/Sentry.Maui.xml",
+        "lib/net7.0-ios16.1/Sentry.Maui.dll",
+        "lib/net7.0-ios16.1/Sentry.Maui.xml",
+        "lib/net7.0-maccatalyst16.1/Sentry.Maui.dll",
+        "lib/net7.0-maccatalyst16.1/Sentry.Maui.xml",
+        "lib/net7.0-windows10.0.19041/Sentry.Maui.dll",
+        "lib/net7.0-windows10.0.19041/Sentry.Maui.xml",
+        "lib/net7.0/Sentry.Maui.dll",
+        "lib/net7.0/Sentry.Maui.xml",
+        "lib/net8.0-android34.0/Sentry.Maui.dll",
+        "lib/net8.0-android34.0/Sentry.Maui.xml",
+        "lib/net8.0-ios17.2/Sentry.Maui.dll",
+        "lib/net8.0-ios17.2/Sentry.Maui.xml",
+        "lib/net8.0-maccatalyst17.2/Sentry.Maui.dll",
+        "lib/net8.0-maccatalyst17.2/Sentry.Maui.xml",
+        "lib/net8.0-windows10.0.19041/Sentry.Maui.dll",
+        "lib/net8.0-windows10.0.19041/Sentry.Maui.xml",
+        "lib/net8.0/Sentry.Maui.dll",
+        "lib/net8.0/Sentry.Maui.xml",
+        "sentry-nuget.png",
+        "sentry.maui.4.9.0.nupkg.sha512",
+        "sentry.maui.nuspec"
       ]
     },
     "Xamarin.Android.Glide/4.13.2.2": {
@@ -18715,6 +22277,7 @@
       "Microsoft.Maui.Graphics >= 7.0.101",
       "Microsoft.NET.ILLink.Analyzers >= 7.0.100-1.23401.1",
       "Microsoft.NET.ILLink.Tasks >= 7.0.100-1.23401.1",
+      "Sentry.Maui >= 4.9.0",
       "Xamarin.Android.Glide >= 4.13.2.2",
       "Xamarin.AndroidX.Browser >= 1.4.0.3",
       "Xamarin.AndroidX.Legacy.Support.V4 >= 1.0.0.15",
@@ -18734,7 +22297,8 @@
       "Microsoft.Extensions.Logging.Debug >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.101",
       "Microsoft.NET.ILLink.Analyzers >= 7.0.100-1.23401.1",
-      "Microsoft.NET.ILLink.Tasks >= 7.0.100-1.23401.1"
+      "Microsoft.NET.ILLink.Tasks >= 7.0.100-1.23401.1",
+      "Sentry.Maui >= 4.9.0"
     ],
     "net7.0-maccatalyst16.1": [
       "Microsoft.Extensions.Configuration >= 7.0.0",
@@ -18743,7 +22307,8 @@
       "Microsoft.Extensions.Logging.Debug >= 7.0.0",
       "Microsoft.Maui.Graphics >= 7.0.101",
       "Microsoft.NET.ILLink.Analyzers >= 7.0.100-1.23401.1",
-      "Microsoft.NET.ILLink.Tasks >= 7.0.100-1.23401.1"
+      "Microsoft.NET.ILLink.Tasks >= 7.0.100-1.23401.1",
+      "Sentry.Maui >= 4.9.0"
     ]
   },
   "packageFolders": {
@@ -18835,6 +22400,10 @@
             "target": "Package",
             "version": "[7.0.100-1.23401.1, )",
             "autoReferenced": true
+          },
+          "Sentry.Maui": {
+            "target": "Package",
+            "version": "[4.9.0, )"
           },
           "Xamarin.Android.Glide": {
             "target": "Package",
@@ -18960,6 +22529,10 @@
             "target": "Package",
             "version": "[7.0.100-1.23401.1, )",
             "autoReferenced": true
+          },
+          "Sentry.Maui": {
+            "target": "Package",
+            "version": "[4.9.0, )"
           }
         },
         "imports": [
@@ -19030,6 +22603,10 @@
             "target": "Package",
             "version": "[7.0.100-1.23401.1, )",
             "autoReferenced": true
+          },
+          "Sentry.Maui": {
+            "target": "Package",
+            "version": "[4.9.0, )"
           }
         },
         "imports": [

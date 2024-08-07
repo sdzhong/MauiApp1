@@ -45,6 +45,8 @@ layer-list;obj/Debug/net7.0-android/resizetizer/sp/drawable-v31/maui_splash_imag
 layer-list;obj/Debug/net7.0-android/resizetizer/sp/drawable/maui_splash_image.xml
 microsoft.maui.controls.platform.compatibility.ShellFlyoutLayout;/Users/simon/Projects/MauiApp1/MauiApp1/obj/Debug/net7.0-android/lp/5/jl/res/layout/flyoutcontent.xml
 paths;/Users/simon/Projects/MauiApp1/MauiApp1/obj/Debug/net7.0-android/lp/9/jl/res/xml/microsoft_maui_essentials_fileprovider_file_paths.xml
+resources;/Users/simon/Projects/MauiApp1/MauiApp1/obj/Debug/net7.0-android/lp/160/jl/res/values/values.xml
+resources;/Users/simon/Projects/MauiApp1/MauiApp1/obj/Debug/net7.0-android/lp/161/jl/res/values/values.xml
 resources;/Users/simon/Projects/MauiApp1/MauiApp1/obj/Debug/net7.0-android/lp/5/jl/res/values/strings.xml
 resources;/Users/simon/Projects/MauiApp1/MauiApp1/obj/Debug/net7.0-android/lp/6/jl/res/values/attrs.xml
 resources;/Users/simon/Projects/MauiApp1/MauiApp1/obj/Debug/net7.0-android/lp/6/jl/res/values/styles.xml

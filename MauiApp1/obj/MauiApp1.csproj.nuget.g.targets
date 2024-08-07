@@ -81,12 +81,17 @@
     <Import Project="$(NuGetPackageRoot)xamarin.android.glide.disklrucache/4.13.2.2/buildTransitive/net6.0-android31.0/Xamarin.Android.Glide.DiskLruCache.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.glide.disklrucache/4.13.2.2/buildTransitive/net6.0-android31.0/Xamarin.Android.Glide.DiskLruCache.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.android.glide.annotations/4.13.2.2/buildTransitive/net6.0-android31.0/Xamarin.Android.Glide.Annotations.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.glide.annotations/4.13.2.2/buildTransitive/net6.0-android31.0/Xamarin.Android.Glide.Annotations.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.android.glide/4.13.2.2/buildTransitive/net6.0-android31.0/Xamarin.Android.Glide.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.android.glide/4.13.2.2/buildTransitive/net6.0-android31.0/Xamarin.Android.Glide.targets')" />
+    <Import Project="$(NuGetPackageRoot)sentry/4.9.0/buildTransitive/Sentry.targets" Condition="Exists('$(NuGetPackageRoot)sentry/4.9.0/buildTransitive/Sentry.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.logging.abstractions/7.0.0/buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.logging.abstractions/7.0.0/buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets')" />
   </ImportGroup>
   <ImportGroup Condition=" '$(TargetFramework)' == 'net7.0-ios' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)sentry.bindings.cocoa/4.9.0/buildTransitive/Sentry.Bindings.Cocoa.targets" Condition="Exists('$(NuGetPackageRoot)sentry.bindings.cocoa/4.9.0/buildTransitive/Sentry.Bindings.Cocoa.targets')" />
+    <Import Project="$(NuGetPackageRoot)sentry/4.9.0/buildTransitive/Sentry.targets" Condition="Exists('$(NuGetPackageRoot)sentry/4.9.0/buildTransitive/Sentry.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.logging.abstractions/7.0.0/buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.logging.abstractions/7.0.0/buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets')" />
   </ImportGroup>
   <ImportGroup Condition=" '$(TargetFramework)' == 'net7.0-maccatalyst' AND '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)sentry.bindings.cocoa/4.9.0/buildTransitive/Sentry.Bindings.Cocoa.targets" Condition="Exists('$(NuGetPackageRoot)sentry.bindings.cocoa/4.9.0/buildTransitive/Sentry.Bindings.Cocoa.targets')" />
+    <Import Project="$(NuGetPackageRoot)sentry/4.9.0/buildTransitive/Sentry.targets" Condition="Exists('$(NuGetPackageRoot)sentry/4.9.0/buildTransitive/Sentry.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.logging.abstractions/7.0.0/buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.logging.abstractions/7.0.0/buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets')" />
   </ImportGroup>
 </Project>
