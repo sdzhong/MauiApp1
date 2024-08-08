@@ -28,7 +28,31 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		
+		<!-- Recommend moving the following to <PropertyGroup Condition="'$(Configuration)' == 'Release'"> as per https://docs.sentry.io/platforms/dotnet/configuration/msbuild/; but for this demo app it can be for every build -->
+		<!-- Configure Sentry org and project -->
+		<SentryOrg>team-se</SentryOrg>
+		<SentryProject>simon-dotnet-maui</SentryProject>
+
+		<!--Each of the below features are opt-in. Enable the features you wish to use. -->
+
+		<!-- Automatically creates a release when building your application. -->
+		<SentryCreateRelease>true</SentryCreateRelease>
+
+		<!-- Automatically associates commits with the release. -->
+		<SentrySetCommits>true</SentrySetCommits>
+
+		<!-- Optionally provide explicit flags to the set-commits command -->
+		<SentrySetCommitOptions>--local</SentrySetCommitOptions>
+
+		<!-- Sends symbols to Sentry, enabling symbolication of stack traces. -->
 		<SentryUploadSymbols>true</SentryUploadSymbols>
+
+		<!-- Sends sources to Sentry, enabling display of source context. -->
+		<SentryUploadSources>true</SentryUploadSources>
+
+		<!-- If you are targeting Android, sends proguard mapping file to Sentry. -->
+		<SentryUploadAndroidProguardMapping>true</SentryUploadAndroidProguardMapping>
 	</PropertyGroup>
 
 	<ItemGroup>
