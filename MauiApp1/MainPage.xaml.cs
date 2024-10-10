@@ -15,10 +15,19 @@ public partial class MainPage : ContentPage
 	{
 		count++;
 
-		if (count == 1)
+		if (count == 1) {
 			CounterBtn.Text = $"Clicked {count} time";
-		else
+			SentrySdk.ConfigureScope(scope =>
+			{
+				scope.User = new SentryUser
+				{
+					Username = "jdoe"
+				};
+				SentrySdk.CaptureMessage("Hello Sentry with user username");
+			});
+		} else {
 			CounterBtn.Text = $"Clicked {count} times";
+		}
 
 		if (count == 3) 
 		{
@@ -30,16 +39,34 @@ public partial class MainPage : ContentPage
 			{
 				SentrySdk.CaptureException(ex);
 			}
+
+			SentrySdk.ConfigureScope(scope =>
+			{
+				scope.User = new SentryUser
+				{
+					Id = "12345"
+				};
+				SentrySdk.CaptureMessage("Hello Sentry with user id");
+			});
 		}
 
 		if (count == 4) 
 		{
 			getProducts();
+
+			SentrySdk.ConfigureScope(scope =>
+			{
+				scope.User = new SentryUser
+				{
+					Email = "john.doe@example.com"
+				};
+				SentrySdk.CaptureMessage("Hello Sentry with user email");
+			});
 		}
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		SemanticScreenReader.Announce(CounterBtn.Text);		
 
-		SentrySdk.CaptureMessage("Hello Sentry");
+		// SentrySdk.CaptureMessage("Hello Sentry");
 
 	}
 
