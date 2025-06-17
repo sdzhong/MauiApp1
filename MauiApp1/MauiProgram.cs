@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Sentry;
 
 namespace MauiApp1;
 
@@ -6,49 +7,53 @@ public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
 	{
-		Boolean turnOn = false;
-
 		var builder = MauiApp.CreateBuilder();
-		if (turnOn) {
-			builder
-				.UseMauiApp<App>()
-				// Add this section anywhere on the builder:
-				.UseSentry(options =>
+		builder
+			.UseMauiApp<App>()
+			// Add this section anywhere on the builder:
+			.UseSentry(options =>
+			{
+				// A Sentry Data Source Name (DSN) is required.
+				// See https://docs.sentry.io/product/sentry-basics/dsn-explainer/
+				// You can set it in the SENTRY_DSN environment variable, or you can set it in code here.
+				options.Dsn = "https://f6da04e8f919d0653336aca12e04eecd@o88872.ingest.us.sentry.io/4507737910673408";
+				options.AttachScreenshot = true;
+				// When debug is enabled, the Sentry client will emit detailed debugging information to the console.
+				// This might be helpful, or might interfere with the normal operation of your application.
+				// We enable it here for demonstration purposes when first trying Sentry.
+				// You shouldn't do this in your applications unless you're troubleshooting issues with Sentry.
+				options.Debug = true;
+
+				// This option is recommended. It enables Sentry's "Release Health" feature.
+				options.AutoSessionTracking = true;
+
+				// Enabling this option is recommended for client applications only. It ensures all threads use the same global scope.
+				options.IsGlobalModeEnabled = false;
+
+				// Example sample rate for your transactions: captures 100% of transactions
+				options.TracesSampleRate = 1.0;
+
+				options.Release = "2.0";
+				options.SetBeforeSend((sentryEvent, hint) =>
 				{
-					// The DSN is the only required setting.
-					options.Dsn = "https://1db5e4fd3844285b38fd9c27f2d57dbf@o88872.ingest.us.sentry.io/4507737910673408";
-
-					// By default, we will send the last 100 breadcrumbs with each event.
-					// If you want to see everything we can capture from MAUI, you may wish to use a larger value.
-					options.MaxBreadcrumbs = 1000;
-
-					// Use debug mode if you want to see what the SDK is doing.
-					// Debug messages are written to stdout with Console.Writeline,
-					// and are viewable in your IDE's debug console or with 'adb logcat', etc.
-					// This option is not recommended when deploying your application.
-					options.Debug = true;
-
-					// Set TracesSampleRate to 1.0 to capture 100% of transactions for tracing.
-					// We recommend adjusting this value in production.
-					options.TracesSampleRate = 1.0;
-
-					// Be aware that screenshots may contain PII
-					options.AttachScreenshot = true;
-
-					// Other Sentry options can be set here.
-					options.Release = "1.0";
-				})
-
-				.ConfigureFonts(fonts =>
-				{
-					fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-					fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+					if (sentryEvent.Tags.ContainsKey("mytag")) {
+						string mytagValue = sentryEvent.Tags["mytag"];
+						if (mytagValue == "abc")
+						{
+							sentryEvent.SetTag("mytag", "abc2");
+						}
+					}
+					return sentryEvent;
 				});
-		} else {
-			builder
-				.UseMauiApp<App>();
-		}
 
+
+			})
+			.ConfigureFonts(fonts =>
+			{
+				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+			});
+			
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif

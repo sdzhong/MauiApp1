@@ -23,7 +23,7 @@ public partial class MainPage : ContentPage
 				{
 					Username = "jdoe"
 				};
-				SentrySdk.CaptureMessage("Hello Sentry with user username");
+				SentrySdk.CaptureMessage("Hello Sentry");
 			});
 		} else {
 			CounterBtn.Text = $"Clicked {count} times";
@@ -40,28 +40,30 @@ public partial class MainPage : ContentPage
 				SentrySdk.CaptureException(ex);
 			}
 
-			SentrySdk.ConfigureScope(scope =>
-			{
-				scope.User = new SentryUser
-				{
-					Id = "12345"
-				};
-				SentrySdk.CaptureMessage("Hello Sentry with user id");
-			});
+			// SentrySdk.ConfigureScope(scope =>
+			// {
+			// 	scope.User = new SentryUser
+			// 	{
+			// 		Id = "12345"
+			// 	};
+			// 	scope.SetTag("mytag", "123");
+			// 	SentrySdk.CaptureMessage("Hello Sentry with user id");
+			// });
 		}
 
 		if (count == 4) 
 		{
-			getProducts();
+            GetProducts();
 
-			SentrySdk.ConfigureScope(scope =>
-			{
-				scope.User = new SentryUser
-				{
-					Email = "john.doe@example.com"
-				};
-				SentrySdk.CaptureMessage("Hello Sentry with user email");
-			});
+			// SentrySdk.ConfigureScope(scope =>
+			// {
+			// 	scope.User = new SentryUser
+			// 	{
+			// 		Email = "john.doe@example.com"
+			// 	};
+			// 	scope.SetTag("mytag", "abc");
+			// 	SentrySdk.CaptureMessage("Hello Sentry with user email");
+			// });
 		}
 
 		SemanticScreenReader.Announce(CounterBtn.Text);		
@@ -121,7 +123,7 @@ public partial class MainPage : ContentPage
             => throw new Exception();
     }
 
-	static async void getProducts()
+    static async void GetProducts()
 	{
 		var transaction = SentrySdk.StartTransaction("tutorial", "ui.load");
 		SentrySdk.ConfigureScope(scope => scope.Transaction = transaction);
