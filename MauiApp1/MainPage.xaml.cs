@@ -35,35 +35,15 @@ public partial class MainPage : ContentPage
 			{
 				throw null;
 			}
-			catch (Exception ex)
-			{
+			catch (Exception ex) {
 				SentrySdk.CaptureException(ex);
+				DisplayAlert("Help", ex.Message, "ok");
 			}
-
-			// SentrySdk.ConfigureScope(scope =>
-			// {
-			// 	scope.User = new SentryUser
-			// 	{
-			// 		Id = "12345"
-			// 	};
-			// 	scope.SetTag("mytag", "123");
-			// 	SentrySdk.CaptureMessage("Hello Sentry with user id");
-			// });
 		}
 
 		if (count == 4) 
 		{
             GetProducts();
-
-			// SentrySdk.ConfigureScope(scope =>
-			// {
-			// 	scope.User = new SentryUser
-			// 	{
-			// 		Email = "john.doe@example.com"
-			// 	};
-			// 	scope.SetTag("mytag", "abc");
-			// 	SentrySdk.CaptureMessage("Hello Sentry with user email");
-			// });
 		}
 
 		SemanticScreenReader.Announce(CounterBtn.Text);		
@@ -129,7 +109,7 @@ public partial class MainPage : ContentPage
 		SentrySdk.ConfigureScope(scope => scope.Transaction = transaction);
 		var httpHandler = new SentryHttpMessageHandler();
 		var httpClient = new HttpClient(httpHandler);
-		var response = await httpClient.GetStringAsync("https://application-monitoring-flask-dot-sales-engineering-sf.appspot.com/products");
+		var response = await httpClient.GetStringAsync("https://flask.empower-plant.com/products");
 		transaction.Finish();
 	}
 
